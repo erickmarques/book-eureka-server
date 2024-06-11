@@ -7,8 +7,11 @@ Este é o servidor Eureka para o projeto Book API. Ele gerencia o registro e a d
 ### Pré-requisitos
 
 - [Java 17+](https://adoptopenjdk.net/)
+- [Docker](https://www.docker.com/)
 
 ### Passos para Instalação
+
+#### Método 1: Usando Java
 
 1. Clone o repositório do servidor Eureka:
     ```sh
@@ -26,8 +29,28 @@ Este é o servidor Eureka para o projeto Book API. Ele gerencia o registro e a d
     http://localhost:8761
     ```
 
-Certifique-se de ajustar quaisquer configurações necessárias no arquivo de configuração antes de iniciar o servidor Eureka.
+#### Método 2: Usando Docker
 
-Fique à vontade para contribuir com este projeto.
+1. Crie a rede Docker:
+    ```sh
+    docker network create book-network
+    ```
 
+2. Construa a imagem Docker do servidor Eureka:
+    ```sh
+    docker build --tag book-eureka-server .
+    ```
 
+3. Rode o contêiner do servidor Eureka:
+    ```sh
+    docker run --name book-eureka-server -p 8761:8761 --network book-network book-eureka-server
+    ```
+
+4. Após iniciar o contêiner, você pode acessar o painel do Eureka no seguinte URL:
+    ```
+    http://localhost:8761
+    ```
+
+### Contribuição
+
+Fique à vontade para contribuir com este projeto. Abra issues para relatar problemas ou sugerir melhorias, e envie pull requests para contribuir com o código.
