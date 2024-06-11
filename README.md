@@ -7,6 +7,7 @@ Este é o servidor Eureka para o projeto Book API. Ele gerencia o registro e a d
 ### Pré-requisitos
 
 - [Java 17+](https://adoptopenjdk.net/)
+- [Gradle](https://gradle.org/)
 - [Docker](https://www.docker.com/)
 
 ### Passos para Instalação
