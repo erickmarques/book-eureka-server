@@ -51,6 +51,5 @@ Este é o servidor Eureka para o projeto Book API. Ele gerencia o registro e a d
     http://localhost:8761
     ```
 
-### Contribuição
 
-Fique à vontade para contribuir com este projeto. Abra issues para relatar problemas ou sugerir melhorias, e envie pull requests para contribuir com o código.
+Fique à vontade para contribuir com este projeto.
